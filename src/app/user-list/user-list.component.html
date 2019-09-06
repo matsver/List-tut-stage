@@ -1,0 +1,21 @@
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <p class="name">id: {{user.id}}</p>
+    <p class="name">{{user.name}}</p>
+    <p class="dob">{{user.dob}}</p>
+    <p class="postal">{{user.postal}}</p>
+    <div class="pt-5 mt-5 container-fluid">
+      <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+      <button class="btn btn-primary" (click)="openModal('custom-modal-1', user.id)">Edit</button>
+    </div>
+  </li>
+</ul>
+
+<jw-modal id="custom-modal-1">
+  <h1>Edit User</h1>
+  <input type="text" [(ngModel)]="name" placeholder="Name">
+  <input type="text" [(ngModel)]="dob" placeholder="Dob">
+  <input type="text" [(ngModel)]="postal" placeholder="Postal">
+  <button class="btn btn-primary" (click)="editUser(id, name, dob, postal)">Edit</button>
+  <button class="btn btn-danger" (click)="closeModal('custom-modal-1')">Close</button>
+</jw-modal>
