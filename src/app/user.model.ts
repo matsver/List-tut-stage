@@ -3,4 +3,5 @@ export class User {
   name: string;
   dob: string;
   postal: string;
+  imgPath: string;
 }

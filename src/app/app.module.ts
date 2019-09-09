@@ -7,13 +7,15 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
+import { SafeHtml } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     FormsComponent,
-    ModalComponent
+    ModalComponent,
+    SafeHtml
   ],
   imports: [
     BrowserModule,

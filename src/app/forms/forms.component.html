@@ -1,4 +1,5 @@
-<input [(ngModel)]="name" placeholder="name">
-<input [(ngModel)]="dob" placeholder="dob">
-<input [(ngModel)]="postal" placeholder="postal">
+<input [(ngModel)]="name" placeholder="name" class="form-control">
+<input [(ngModel)]="dob" placeholder="dob" class="form-control">
+<input [(ngModel)]="postal" placeholder="postal" class="form-control">
+<input class="form-control-file" name="imgUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
 <button class="btn btn-primary" (click)="addUser(name, dob, postal)">Add</button>

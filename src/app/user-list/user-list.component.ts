@@ -16,7 +16,7 @@ export class UserListComponent implements OnInit {
   dob: string;
   postal: string;
 
-  constructor(private _user: UserService, private modalService: ModalService) { }
+  constructor(private _user: UserService, private modalService: ModalService ) { }
 
   ngOnInit() {
     this._user.getAllUsers().subscribe(data => {
